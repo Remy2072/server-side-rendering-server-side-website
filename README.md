@@ -1,4 +1,4 @@
-# Squad page v2
+# Funda favorieten
 Een squad page gemaakt met een APi
 
 
