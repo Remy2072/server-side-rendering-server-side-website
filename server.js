@@ -5,9 +5,7 @@ import express from 'express'
 import fetchJson from './helpers/fetch-json.js'
 
 // Haal data op uit de Funda API, ga pas verder als de data gedownload is
-const houses = await fetchJson('https://fdnd-agency.directus.app/items/f_houses')
-const favoriteList = await fetchJson('https://fdnd-agency.directus.app/items/f_list')
-const housesImages = await fetchJson('https://fdnd-agency.directus.app/items/f_houses_files')
+const apiUrl = 'https://fdnd-agency.directus.app/items/f_houses';
 
 // Maak een nieuwe express app aan
 const app = express()
@@ -26,8 +24,14 @@ app.use(express.urlencoded({extended: true}))
 
 // Maak een GET route voor de index
 app.get('/', function (request, response) {
+
+  //Fetch data uit de API en geef parameter door
+  fetchJson(apiUrl).then((housesData) => {
+
   // Render index.ejs uit de views map en geef uit FDND API opgehaalde data mee
-  response.render('index')
+  response.render('index', {houses: housesData.data})
+  });
+
 })
 
 // Maak een POST route voor de index

@@ -4,18 +4,39 @@ nav {
     background-color: var(--color-WebOrange);
     display: flex;
     justify-content: space-between;
+
+    & .logo-container {
+        display: flex;
+        align-items: center;
+        width: auto;
+        margin: 0;
+    }
+
+    & .logo {
+        margin-left: 1.25rem;
+        width: 100px;
+    }
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    width: auto;
-    margin: 0;
+#check {
+    display: none;
 }
 
-.logo {
-    margin-left: 1.25rem;
-    width: 100px;
+#check:checked ~ .nav-list {
+    height: 100vh;
+}
+
+#check:checked ~ .nav-list li {
+    opacity: 1;
+}
+
+.hamburger-btn {
+    display: block;
+    color: var(--color-White);
+    float: right;
+    line-height: 7.188rem;
+    margin-right: 15px;
+    cursor: pointer;
 }
 
 .nav-list {
@@ -27,6 +48,7 @@ nav {
     float: right;
     text-align: center;
     transition: all 0.5s;
+    z-index: 1;
 }
 
 .nav-list li {
@@ -48,35 +70,17 @@ nav {
     transition: 0.5s;
 }
 
-.hamburger-btn {
-    display: block;
-    color: var(--color-White);
-    float: right;
-    line-height: 7.188rem;
-    margin-right: 15px;
-    cursor: pointer;
-}
-
-#check {
-    display: none;
-}
-
-#check:checked ~ .nav-list {
-    height: 100vh;
-}
-
-#check:checked ~ .nav-list li {
-    opacity: 1;
-}
-
 @media only screen and (min-width: 56.25rem) {
-
     .logo-container {
         margin-left: 9rem;
+
+        & .logo {
+            width: 150px;
+        }
     }
 
-    .logo {
-        width: 150px;
+    .hamburger-btn {
+        display: none;
     }
 
     .nav-list {
@@ -100,9 +104,5 @@ nav {
 
     .nav-list li a {
         color: var(--color-White);
-    }
-
-    .hamburger-btn {
-        display: none;
     }
 }
