@@ -1,5 +1,5 @@
 .container {
-    max-width: 1170px;
+    max-width: 95rem;
     margin: auto;
 }
 
@@ -9,8 +9,8 @@
 }
 
 .footer {
-    background-color: #24262b;
-    padding: 70px 0;
+    background-color: var(--color-Footer);
+    padding: 4.375rem 0;
 }
 
 .footer-col {
@@ -19,10 +19,10 @@
 }
 
 .footer-col h4 {
-    font-size: 18px;
-    color: #ffffff;
+    font-size: 1.125rem;
+    color: var(--color-MineShaft);
     text-transform: capitalize;
-    margin-bottom: 35px;
+    margin-bottom: 2.188rem;
     font-weight: 500;
     position: relative;
 }
@@ -32,10 +32,10 @@
     position: absolute;
     left: 0;
     bottom: -10px;
-    background-color: #e91e63;
+    background-color: var(--color-WebOrange);
     height: 2px;
     box-sizing: border-box;
-    width: 50px;
+    width: 3.125rem;
 }
 
 .footer-col ul li:not(:last-child) {
@@ -43,46 +43,45 @@
 }
 
 .footer-col ul li a {
-    font-size: 16px;
+    font-size: 1rem;
     text-transform: capitalize;
-    color: #ffffff;
     text-decoration: none;
     font-weight: 300;
-    color: #bbbbbb;
+    color: var(--color-Lochmara);
     display: block;
     transition: all 0.3s ease;
 }
 
 .footer-col ul li a:hover {
-    color: #ffffff;
+    color: var(--color-Malibu);
     padding-left: 8px;
 }
 
 .footer-col .social-links a {
     display: inline-block;
-    height: 40px;
-    width: 40px;
-    background-color: rgba(255, 255, 255, 0.2);
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #E6E6E6;
     margin: 0 10px 10px 0;
     text-align: center;
-    line-height: 40px;
+    line-height: 2.5rem;
     border-radius: 50%;
-    color: #ffffff;
+    color: var(--color-White);
     transition: all 0.5s ease;
 }
 
 .footer-col .social-links a:hover {
-    color: #24262b;
-    background-color: #ffffff;
+    color: var(--color-MineShaft);
+    background-color: var(--color-MineShaft);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 47.938rem) {
     .footer-col {
         width: 50%;
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
     }
 }
-@media (max-width: 574px) {
+@media (max-width: 35.875rem) {
     .footer-col {
         width: 100%;
     }

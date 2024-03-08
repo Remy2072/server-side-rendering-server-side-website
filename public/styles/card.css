@@ -64,6 +64,6 @@ section {
 
 @media only screen and (min-width: 56.25rem) {
     section {
-        padding: 0 9rem;
+        padding: 0 9rem 1.25rem 9rem;
     }
 }

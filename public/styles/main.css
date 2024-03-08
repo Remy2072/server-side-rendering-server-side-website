@@ -28,6 +28,10 @@
     --color-RegentBlue: #E6F2F7;
     --color-Lochmara: #0071B3;
     --color-MineShaft: #333333; 
+
+    --color-Malibu: #60C5F8;
+
+    --color-Footer: #F2F2F2;
 }
 
 * {
@@ -36,19 +40,17 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: "Semibold";
 }
 
 h1 {
     font-size: 32px;
-    font-family: "Semibold";
 }
 
 h2 {
     font-size: 20px;
-    font-family: "Semibold";
 }
 
 p {
     font-size: 16px;
-    font-family: "Semibold";
 }
