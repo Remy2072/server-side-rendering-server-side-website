@@ -5,13 +5,19 @@
     <section>
         <header>
             <h1>Favoriete huizen</h1>
-            <button>Bewaardatum</button>
+                <select>
+                    <option selected disabled value="">Sorteren</option>
+                    <option value="">Plaats</option>
+                    <option value="">Vraagprijs</option>
+                    <option value="">Kamers</option>
+                    <option  value="">Oppervlakte</option>
+                </select>
         </header>
         <% houses.forEach(house => { %>
         <article>
                 <box-icon name="message-square-x" size="md" color="#f7a100"></box-icon>
             <figure>
-                <img src="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>" alt=Foto van het huis">
+                <img src="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>" alt="Foto van het huis">
             </figure>
             <div>
                 <h2><%= house.street %> <%= house.house_nr %> <%= house.nr_addition %></h2>
