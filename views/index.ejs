@@ -12,7 +12,7 @@
                     <option value="">Kamers</option>
                     <option  value="">Oppervlakte</option>
                 </select>
-        </header>
+            </header>
         <% houses.forEach(house => { %>
         <article>
                 <box-icon name="message-square-x" size="md" color="#f7a100"></box-icon>
@@ -20,12 +20,12 @@
                 <img src="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>" alt="Foto van het huis">
             </figure>
             <div>
-                <h2><%= house.street %> <%= house.house_nr %> <%= house.nr_addition %></h2>
-                <p><%= house.postal_code%> <%= house.city %></p>
-                <p>€ <%= house.price %> k.k.</p>
-                <p><%= house.m2 %> m² / <%= house.m2_garden %> m² <%= house.rooms %> kamers</p>
-                <p><%= house.agent %></p>
-            </div>
+        <h2><a href="/detail/<%= house.id %>"><%= house.street %> <%= house.house_nr %> <%= house.nr_addition %></a></h2>
+        <p><%= house.postal_code%> <%= house.city %></p>
+        <p>€ <%= house.price %> k.k.</p>
+        <p><%= house.m2 %> m² / <%= house.m2_garden %> m² <%= house.rooms %> kamers</p>
+        <p><%= house.agent %></p>
+    </div>
         </article>
         <% }) %>
     </section>
